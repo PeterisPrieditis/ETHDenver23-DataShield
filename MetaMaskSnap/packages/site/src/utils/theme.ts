@@ -7,8 +7,9 @@ import { getLocalStorage, setLocalStorage } from './localStorage';
  * @returns True if the theme is "dark" otherwise, false.
  */
 export const getThemePreference = () => {
+  return false
   if (typeof window === 'undefined') {
-    return false;
+    return true;
   }
 
   const darkModeSystem = window?.matchMedia(

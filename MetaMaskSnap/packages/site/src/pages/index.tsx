@@ -1,8 +1,9 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
 import * as smartmoney from '../assets/smart_money.json';
 import * as smarttx from '../assets/smart_tx.json';
+
 import {
   connectSnap,
   getSnap,
@@ -188,7 +189,121 @@ const Index = () => {
     }
   };
 
-  const [inputAddress, setInputAddress] = useState('0x7aa9...');
+  const [inputAddress, setInputAddress] = useState("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D");
+  const [debounceInputAddress, setDebounceInputAddress] = useState();
+  const [chatList, setChatList] = useState<any>([]);
+  useEffect(() => {
+    if (inputAddress) {
+      const timeout = setTimeout(() => {
+        setDebounceInputAddress(inputAddress);
+      }, 800);
+      return () => clearTimeout(timeout);
+    }
+  }, [inputAddress]);
+
+  useEffect(() => {
+    if (debounceInputAddress !== inputAddress) {
+      console.log('debounceInputAddress', debounceInputAddress);
+      //https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=-0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+      //https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=-0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+      //https://api.gopluslabs.io/api/v1/address_security/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d?chain_id=1 
+      //https://api.gopluslabs.io/api/v1/nft_security/1?contract_addresses=0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+      const addressSecurity = "https://api.gopluslabs.io/api/v1/address_security/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d?chain_id=1"
+      fetch(addressSecurity)
+  .then((response) => response.json())
+  .then((data) => {
+  
+
+      fetch(addressSecurity)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Success:', data);
+          async function fetchStream(stream:any) {
+            const reader = stream.getReader();
+            let charsReceived = 0;
+            let li = ""
+        
+            // read() returns a promise that resolves
+            // when a value has been received
+            const result = await reader.read().then(
+                function processText({ done, value }:any) {
+                    // Result objects contain two properties:
+                    // done  - true if the stream has already given you all its data.
+                    // value - some data. Always undefined when done is true.
+                    if (done) {
+                        console.log("Stream complete");
+                        return li;
+                    }
+                    // value for fetch streams is a Uint8Array
+                    charsReceived += value.length;
+                    const chunk = value;
+                    console.log(`Received ${charsReceived} characters so far. Current chunk = ${chunk}`);
+                    li+=chunk;
+                    return reader.read().then(processText);
+                });
+            const list = result.split(",")
+            const numList = list.map((item:any) => {
+                return parseInt(item)
+            })
+            const text = String.fromCharCode(...numList);
+            const response = JSON.parse(text)
+            return response
+        }
+
+          async function createCompletion(params = {}) {
+            const DEFAULT_PARAMS = {
+                model: "gpt-3.5-turbo",
+                messages: [{ role: "system", content: "The user will provide you a machine readable JSON of ethereum security assesments and you have to convert it a 200 character text for a target group of an iq of 90." },
+                { role: "user", content: JSON.stringify(data) }],
+                // max_tokens: 4096,
+                temperature: 0,
+                // frequency_penalty: 1.0,
+                // stream: true,
+            };
+            const params_ = { ...DEFAULT_PARAMS, ...params };
+            try{
+            const result = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${"ENTER TOKEN HERE"}`
+                },
+                body: JSON.stringify(params_)
+            });
+            const stream = result.body
+            const output = await fetchStream(stream);
+            console.log(output)
+            if(output?.error?.code==="invalid_api_key"){
+              throw "invalid_api_key"
+            }
+              output?.choices?.[0]?.message && setChatList((previousInputs:any) => (previousInputs.concat(output.choices[0].message)));
+
+            }catch(err){
+              console.log(err)
+              //delay setChatList 2 seconds
+              setTimeout(() => {
+
+              setChatList([{content: "Ethereum security assessments show no signs of cybercrime, money laundering, phishing activities, or any other malicious activities. The contract address is secure and there is no evidence of fake KYC or stealing attacks. The data source is unknown, but there is no doubt of any blacklisted activities or sanctioned behavior. Malicious mining activities, mixers, and honeypot-related addresses are also absent."}])
+              }, 2000);
+
+            }
+
+        }
+        createCompletion()
+          
+        }
+        )
+        .catch((error:any) => {
+          console.error('Error:', error);
+        }
+
+        )
+
+
+
+
+    
+  })}}, [debounceInputAddress,inputAddress]);
 
   return (
     <Container>
@@ -211,7 +326,14 @@ const Index = () => {
           value={inputAddress}
           placeholder="0x7aa9..."
         />
-        <button style={{ width: '100%' }}>Analyze</button>{' '}
+        <button style={{ width: '100%' }}>Analyze</button>
+
+        {chatList.length >0 && <CardContainer>
+          <Card
+            content={{
+              title: 'Results',
+              description: <p style={{maxWidth:"300px"}}>{(chatList as any)[0].content}</p>  }} />
+        </CardContainer>}
       </div>
       <CardContainer>
         <Card

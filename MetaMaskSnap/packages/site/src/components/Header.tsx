@@ -34,6 +34,7 @@ const LogoWrapper = styled.div`
 
 const RightContainer = styled.div`
   display: flex;
+  max-width: 20rem;
   flex-direction: row;
   align-items: center;
 `;
@@ -63,14 +64,16 @@ export const Header = ({
   return (
     <HeaderWrapper>
       <LogoWrapper>
-        <SnapLogo color={theme.colors.icon.default} size={36} />
-        <Title>Data Shield</Title>
+       <div style={{maxWidth:"10px !important"}} >
+       <SnapLogo style={{maxWidth:"10px !important"}} color={theme.colors.icon.default} />
+        </div>
+        <Title><div style={{color:"#7FD3A0"}}>DATA</div><div style={{color:"#333333"}}>SHIELD</div></Title>
       </LogoWrapper>
       <RightContainer>
-        <Toggle
+        {/* <Toggle
           onToggle={handleToggleClick}
           defaultChecked={getThemePreference()}
-        />
+        /> */}
         <HeaderButtons state={state} onConnectClick={handleConnectClick} />
       </RightContainer>
     </HeaderWrapper>

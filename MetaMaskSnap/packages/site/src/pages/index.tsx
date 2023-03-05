@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
+import * as smartmoney from '../assets/smart_money.json';
+import * as smarttx from '../assets/smart_tx.json';
 import {
   connectSnap,
   getSnap,
@@ -14,13 +16,34 @@ import {
   SendHelloButton,
   Card,
 } from '../components';
+const Input = styled.input`
+  padding: 1rem;
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+  color: ${({ theme }) => theme.colors.text.default};
+  background-color: ${({ theme }) => theme.colors.background.light};
+  border: 1px solid ${({ theme }) => theme.colors.border.default};
+  border-radius: ${({ theme }) => theme.radii.default};
+  width: 100%;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+
+  &:focus {
+    outline: none;
+    border: 1px solid ${({ theme }) => theme.colors.primary.default};
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.text.placeholder};
+  }
+`;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
-  margin-top: 7.6rem;
+  margin-top: 3.6rem;
   margin-bottom: 7.6rem;
   ${({ theme }) => theme.mediaQueries.small} {
     padding-left: 2.4rem;
@@ -33,7 +56,7 @@ const Container = styled.div`
 
 const Heading = styled.h1`
   margin-top: 0;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2rem;
   text-align: center;
 `;
 
@@ -99,6 +122,45 @@ const ErrorMessage = styled.div`
   }
 `;
 
+const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid ${({ theme }) => theme.colors.border.default};
+  }
+
+  th {
+    background-color: ${({ theme }) => theme.colors.background.alternative};
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.text.alternative};
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: ${({ theme }) => theme.colors.background.light};
+  }
+
+  ${({ error, theme }) =>
+    error &&
+    `
+      th,
+      td {
+        border: 1px solid ${theme.colors.error.default};
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: ${theme.colors.error.muted};
+      }
+  `}
+`;
+
 const Index = () => {
   const [state, dispatch] = useContext(MetaMaskContext);
 
@@ -126,44 +188,80 @@ const Index = () => {
     }
   };
 
+  const [inputAddress, setInputAddress] = useState('0x7aa9...');
+
   return (
     <Container>
       <Heading>
-        Welcome to <Span>Data Shield</Span>
+        Welcome to <span style={{ color: '#7FD3A0' }}>DATA</span>
+        <span style={{ color: '#333333' }}> SHIELD</span>
       </Heading>
       <Subtitle>
-      Find data on any<code>ETH NFT</code>
+        Find data on any
+        <code>
+          <b>ETH ADDRESS OR NFT</b>
+        </code>
       </Subtitle>
 
-    <div>    <input/><button>Analyze</button> </div>
+      <div>
+        {' '}
+        <br />{' '}
+        <Input
+          onChange={(event) => setInputAddress(event.target.value)}
+          value={inputAddress}
+          placeholder="0x7aa9..."
+        />
+        <button style={{ width: '100%' }}>Analyze</button>{' '}
+      </div>
       <CardContainer>
-      <Card
-            content={{
-              title: 'Smart money',
-              description:
-                <div>
-
-                  Using our insights, you can make better decisions and earn more money.
-                <table>
+        <Card
+          content={{
+            title: 'Smart money',
+            description: (
+              <div>
+                Using our insights, you can make better decisions and earn more
+                money.
+                <Table>
                   <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                    <td>Bot entity</td>
+                    <td>Contract</td>
+                    <td>Profit</td>
                   </tr>
-                  <tr>
-                    <td>4</td>
+                  {smartmoney.map((item) => {
+                    //{"mev_trades":"3E5BC06268C827E684B278AAAACCDF7B741EE6494670CFC0D7155F1AFA2C068F","contract_address":"44D39E215C112C5AEC6A733D691B464AA62B3F85","topic":"52D77A8187160E41D08F892F46D6CF8ADA1F6771","value":0.01460109}
+                    // style tds with ellipsis
+                    return (
+                      <tr>
+                        <td style={{ maxWidth: '200px',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        }}>{item.contract_address}</td>
 
-                    <td>5</td>
-                    <td>6</td>
-                  </tr>
-                </table>
-                
-                </div>
- 
-            }}
-            fullWidth
-          />
-        </CardContainer>
+                        <td style={{ maxWidth: '200px',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        }}>{item.mev_trades}</td>
+                        {/* <td style={{ maxWidth: '200px',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        }} >{item.topic}</td> */}
+                        <td style={{ maxWidth: '100px',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        }} >USD {
+                        // improve the styling of the value
+                          item.value 
+                        }</td> 
+                      </tr>
+                    );
+                  })}
+                </Table>
+              </div>
+            ),
+          }}
+          fullWidth
+        />
+      </CardContainer>
       <CardContainer>
         {state.error && (
           <ErrorMessage>
@@ -213,7 +311,7 @@ const Index = () => {
             disabled={!state.installedSnap}
           />
         )}
-      
+
         <Notice>
           <p>
             Please note that the <b>snap.manifest.json</b> and{' '}
@@ -221,7 +319,6 @@ const Index = () => {
             the bundle must be hosted at the location specified by the location
             field.
           </p>
-          
         </Notice>
       </CardContainer>
     </Container>
@@ -229,4 +326,3 @@ const Index = () => {
 };
 
 export default Index;
-

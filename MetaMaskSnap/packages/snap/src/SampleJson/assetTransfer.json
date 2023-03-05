@@ -1,0 +1,107 @@
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "changes": [
+      {
+        "assetType": "NATIVE",
+        "changeType": "TRANSFER",
+        "from": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+        "to": "0x1e4b7a6b903680eab0c5dabcb8fd429cd2a9598c",
+        "rawAmount": "10000000000000",
+        "contractAddress": null,
+        "tokenId": null,
+        "decimals": 18,
+        "symbol": "MATIC",
+        "name": "MATIC",
+        "logo": "https://static.alchemyapi.io/images/network-assets/matic.png",
+        "amount": "0.00001"
+      },
+      {
+        "assetType": "NATIVE",
+        "changeType": "TRANSFER",
+        "from": "0x1e4b7a6b903680eab0c5dabcb8fd429cd2a9598c",
+        "to": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "rawAmount": "10000000000000",
+        "contractAddress": null,
+        "tokenId": null,
+        "decimals": 18,
+        "symbol": "MATIC",
+        "name": "MATIC",
+        "logo": "https://static.alchemyapi.io/images/network-assets/matic.png",
+        "amount": "0.00001"
+      },
+      {
+        "assetType": "ERC20",
+        "changeType": "TRANSFER",
+        "from": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "to": "0x1e4b7a6b903680eab0c5dabcb8fd429cd2a9598c",
+        "rawAmount": "10000000000000",
+        "contractAddress": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "tokenId": null,
+        "decimals": 18,
+        "symbol": "WMATIC",
+        "name": "Wrapped Matic",
+        "logo": "https://static.alchemyapi.io/images/assets/8925.png",
+        "amount": "0.00001"
+      },
+      {
+        "assetType": "ERC20",
+        "changeType": "TRANSFER",
+        "from": "0x1e4b7a6b903680eab0c5dabcb8fd429cd2a9598c",
+        "to": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
+        "rawAmount": "10000000000000",
+        "contractAddress": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+        "tokenId": null,
+        "decimals": 18,
+        "symbol": "WMATIC",
+        "name": "Wrapped Matic",
+        "logo": "https://static.alchemyapi.io/images/assets/8925.png",
+        "amount": "0.00001"
+      },
+      {
+        "assetType": "ERC20",
+        "changeType": "TRANSFER",
+        "from": "0x0000000000000000000000000000000000000000",
+        "to": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+        "rawAmount": "487696626167660",
+        "contractAddress": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97",
+        "tokenId": null,
+        "decimals": 18,
+        "symbol": "aPolWMATIC",
+        "name": "Aave Polygon WMATIC",
+        "logo": null,
+        "amount": "0.00048769662616766"
+      }
+    ],
+    "gasUsed": "0x2b123",
+    "error": null
+  }
+}
+let filteredData = Object.values(data.result.changes).filter(function (
+item,
+) {
+  if(typeof(item) == 'object' && item != null){
+      return (
+        console.log(item)
+      );
+  };
+});
+let filteredData = Object.values(data.result.changes).filter(function (
+item,
+) {
+      return (
+        console.log(item)
+      );
+});
+
+let filteredData = Object.values(data.result.changes).filter(function (
+item,
+) {
+      return (
+        console.log(item.from == '0xeeb2f6f7a3953b8d9abb8755872f106cebadd620' || item.to == '0xeeb2f6f7a3953b8d9abb8755872f106cebadd620')
+      );
+});
+
+item.from === '0xeeb2f6f7a3953b8d9abb8755872f106cebadd620' ||
+item.to === '0xeeb2f6f7a3953b8d9abb8755872f106cebadd620';

@@ -1,0 +1,29 @@
+https://api.etherscan.io/api
+   ?module=contract
+   &apikey=112F4KAFBT6EEYZKNPN8X94PBN1K6QVJVF
+   &action=getsourcecode
+   &address=0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+   
+
+https://api.polygonscan.com/api
+   ?module=contract
+   &apikey=9CSKBQWVMATK4H3GYFQ2D9883DFGTZ3SGT
+   &action=getsourcecode
+   &address=0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d
+   
+   await blockExplorerStatus(137, '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d');
+   await blockExplorerStatus(137, '0xa947651C0D2160f2f2A348F02A6830D60Ecbed86');
+
+   An error occured with txt sim: Invalid text component: 
+   At path: value -- Expected a string, but received: [object Promise].
+
+
+   @ziadmtl Can you please say what is the best way to get web site url name in a function onTransaction for transaction insight? Usually for google chrome extension it is like:
+chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+  var currentUrl = tabs[0].url;
+  console.log(currentUrl);
+});
+
+I noticed that there is a arg transactionOrigin for OnTransactionHandler but I'm getting null value from it...
+ * @param args.transactionOrigin - The origin of the transaction. This is the
+ * URL of the dapp that submitted the transaction.

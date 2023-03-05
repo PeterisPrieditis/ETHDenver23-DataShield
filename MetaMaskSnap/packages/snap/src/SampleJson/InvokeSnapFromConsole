@@ -1,0 +1,108 @@
+const response = await ethereum.request({
+  method: 'wallet_invokeSnap', 
+  params: [snapId, {
+    method: 'storeAddress',
+    nameToStore: name, 
+    addressToStore: address
+  }]
+})
+
+await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: `local:http://localhost:8080`,
+    request: {
+      method: 'hello',
+      nameToStore: 'awesomeName!',
+      addressToStore: 'aaaaaaddddresssss',
+    },
+  },
+});
+await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: `local:http://localhost:8080`,
+    request: {
+      method: 'storeStateData',
+      nameToStore: 'awesomeName!',
+      addressToStore: 'aaaaaaddddresssss',
+    },
+  },
+});
+------------------
+await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: `local:http://localhost:8080`,
+    request: {
+      method: 'getSnapState',
+    },
+  },
+});
+
+await window.ethereum.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: `local:http://localhost:8080`,
+    request: {
+      method: 'storeStateData',
+      params: {
+        alchemyPolygonMainnet: 'name123a',
+        polygonscan: 'name123b',
+        addressBook: [{
+          nameToStore: 'name', 
+          addressToStore: 'address',
+          folder: 'root'
+        }],
+      }, 
+    },
+  },
+});
+
+
+
+0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8
+
+
+Web3.utils.sha3("EIP-4844");
+0x3cd65f6089844a3c6409b0acc491ca0071a5672c2ab2a071f197011e0fc66b6a
+
+bytes32 private constant RIDDLE_3_ETH_MESSAGE_HASH = 0x20a1626365cea00953c957fd02ddc4963990d404232d4e58acb66f46c59d9887;
+signature
+0xa8637e5575618d102b2991dfffdd6ad38fac37b7c0e1ddf264929556cd07171546b9ef0737bfeecd52ec773a8075ebe019e4c44cbe0dde41e59bf42d77ef9ee71c
+
+"EIP-4844"
+"0xF7a425913e447a1c48f4C75bb6A771e7C2b6Cc5a"
+"0xfb4e17ec89a59ee9faee309dd21b09447d23d829981c4ea7ccdb0a31173a418a2d863b229fd3bcb61638385533cc26d93dcb53cca243c630c28ad2bec3ff0dc11c"
+
+0x9c611b41c1f90946c2b6ddd04d716f6ec349ac4b4f99612c3e629db39502b941
+0x20a1626365cea00953c957fd02ddc4963990d404232d4e58acb66f46c59d9887
+
+
+0xF7a425913e447a1c48f4C75bb6A771e7C2b6Cc5a
+
+
+let options = {
+  method: 'POST',
+  headers: { accept: 'application/json', 'content-type': 'application/json' },
+  body: JSON.stringify({
+    app_key: "mBOMg20QW11BbtyH4Zh0",
+    time: 1647847498,
+    app_secret: "V6aRfxlPJwN3ViJSIFSCdxPvneajuJsh",
+    sign: "7293d385b9225b3c3f232b76ba97255d0e21063e",
+  }),
+};
+let url = "https://api.gopluslabs.io/api/v1/phishing_site?url=https://xn--cm-68s.cc/";
+let phishingResp;
+await fetch(url)
+  .then((response) => response.json())
+  .then((response) => {
+    phishingResp = response.result.phishing_site;
+  })
+  .catch((err) => {
+    console.log(
+      'Error occured with GoPlus Security call!',
+    );
+    console.error(err);
+  });
+console.log(JSON.stringify(phishingResp));

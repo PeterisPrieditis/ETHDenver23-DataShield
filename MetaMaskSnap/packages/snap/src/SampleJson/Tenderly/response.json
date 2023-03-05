@@ -1,0 +1,757 @@
+{
+  "id": 0,
+  "jsonrpc": "2.0",
+  "result": {
+    "status": true,
+    "gasUsed": "0x3501c",
+    "cumulativeGasUsed": "0x0",
+    "blockNumber": "0xff5997",
+    "type": "0x0",
+    "logsBloom": "0x00000020000008000080000000800000000000000000400000000000000008020000000000000000000000000004000002000000080000000000000000000000000000000000000000000008000000800000000004000000000000048000000000000020020000000000000000000800020000000008800200000010000100000000000090000000000000400000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000010002000002000000000000002040080000000020000000000000000000000020000000200000000000000000000000000040000000000000400000400000040000",
+    "logs": [
+      {
+        "name": "Deposit",
+        "anonymous": false,
+        "inputs": [
+          {
+            "value": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "type": "address",
+            "name": "dst"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "wad"
+          }
+        ],
+        "raw": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "topics": [
+            "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c",
+            "0x000000000000000000000000d322a49006fc828f9b5b37ab215f99b4e5cab19c"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000e8d4a51000"
+        }
+      },
+      {
+        "name": "ReserveDataUpdated",
+        "anonymous": false,
+        "inputs": [
+          {
+            "value": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "type": "address",
+            "name": "reserve"
+          },
+          {
+            "value": "21226901470258681459553942",
+            "type": "uint256",
+            "name": "liquidityRate"
+          },
+          {
+            "value": "99370979944027085694908295",
+            "type": "uint256",
+            "name": "stableBorrowRate"
+          },
+          {
+            "value": "39802430946825731410162881",
+            "type": "uint256",
+            "name": "variableBorrowRate"
+          },
+          {
+            "value": "1001513307492938143179251331",
+            "type": "uint256",
+            "name": "liquidityIndex"
+          },
+          {
+            "value": "1003250493874061503753978503",
+            "type": "uint256",
+            "name": "variableBorrowIndex"
+          }
+        ],
+        "raw": {
+          "address": "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+          "topics": [
+            "0x804c9b842b2748a22bb64b345453a3de7ca54a6ca45ce00d415894979e22897a",
+            "0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+          ],
+          "data": "0x000000000000000000000000000000000000000000118ef8a26bf0405e24b69600000000000000000000000000000000000000000052329f9deaf48c26dd378700000000000000000000000000000000000000000020ec7e1aea4cd69b1ef4c10000000000000000000000000000000000000000033c6eb13016e4c08cfc9e830000000000000000000000000000000000000000033dde8e4011bc8911ed8287"
+        }
+      },
+      {
+        "name": "Transfer",
+        "anonymous": false,
+        "inputs": [
+          {
+            "value": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "type": "address",
+            "name": "from"
+          },
+          {
+            "value": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+            "type": "address",
+            "name": "to"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "value"
+          }
+        ],
+        "raw": {
+          "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x000000000000000000000000d322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "0x0000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000e8d4a51000"
+        }
+      },
+      {
+        "name": "Transfer",
+        "anonymous": false,
+        "inputs": [
+          {
+            "value": "0x0000000000000000000000000000000000000000",
+            "type": "address",
+            "name": "from"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "to"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "value"
+          }
+        ],
+        "raw": {
+          "address": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "0x000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd620"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000e8d4a51000"
+        }
+      },
+      {
+        "name": "Mint",
+        "anonymous": false,
+        "inputs": [
+          {
+            "value": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "type": "address",
+            "name": "caller"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "onBehalfOf"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "value"
+          },
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": "balanceIncrease"
+          },
+          {
+            "value": "1001513307492938143179251331",
+            "type": "uint256",
+            "name": "index"
+          }
+        ],
+        "raw": {
+          "address": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+          "topics": [
+            "0x458f5fa412d0f69b08dd84872b0215675cc67bc1d5b6fd93300a1c3878b86196",
+            "0x000000000000000000000000d322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "0x000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd620"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000e8d4a5100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033c6eb13016e4c08cfc9e83"
+        }
+      },
+      {
+        "name": "ReserveUsedAsCollateralEnabled",
+        "anonymous": false,
+        "inputs": [
+          {
+            "value": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "type": "address",
+            "name": "reserve"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "user"
+          }
+        ],
+        "raw": {
+          "address": "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+          "topics": [
+            "0x00058a56ea94653cdf4f152d227ace22d4c00ad99e2a43f58cb7d9e3feb295f2",
+            "0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "0x000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd620"
+          ],
+          "data": "0x"
+        }
+      },
+      {
+        "name": "Supply",
+        "anonymous": false,
+        "inputs": [
+          {
+            "value": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "type": "address",
+            "name": "reserve"
+          },
+          {
+            "value": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "type": "address",
+            "name": "user"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "onBehalfOf"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "amount"
+          },
+          {
+            "value": 0,
+            "type": "uint16",
+            "name": "referralCode"
+          }
+        ],
+        "raw": {
+          "address": "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+          "topics": [
+            "0x2b627736bca15cd5381dcf80b0bf11fd197d01a037c52b927a881a10fb73ba61",
+            "0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "0x000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "0x0000000000000000000000000000000000000000000000000000000000000000"
+          ],
+          "data": "0x000000000000000000000000d322a49006fc828f9b5b37ab215f99b4e5cab19c000000000000000000000000000000000000000000000000000000e8d4a51000"
+        }
+      }
+    ],
+    "trace": [
+      {
+        "type": "CALL",
+        "from": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+        "to": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+        "gas": "0x5f58b58",
+        "gasUsed": "0x34830",
+        "value": "0xe8d4a51000",
+        "input": "0x474cf53d00000000000000000000000087870bca3f3fd6335c3f4ce8392d69350b4fa4e2000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd6200000000000000000000000000000000000000000000000000000000000000000",
+        "decodedInput": [
+          {
+            "value": "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+            "type": "address",
+            "name": ""
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "onBehalfOf"
+          },
+          {
+            "value": 0,
+            "type": "uint16",
+            "name": "referralCode"
+          }
+        ],
+        "method": "depositETH",
+        "output": "0x",
+        "subtraces": 2,
+        "traceAddress": [0]
+      },
+      {
+        "type": "CALL",
+        "from": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+        "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "gas": "0x5dd8ef5",
+        "gasUsed": "0x5da6",
+        "value": "0xe8d4a51000",
+        "input": "0xd0e30db0",
+        "output": "0x",
+        "subtraces": 0,
+        "traceAddress": [0, 0]
+      },
+      {
+        "type": "CALL",
+        "from": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+        "to": "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+        "gas": "0x5dd2766",
+        "gasUsed": "0x2b7fd",
+        "value": "0x0",
+        "input": "0xe8eda9df000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000000000000000e8d4a51000000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd6200000000000000000000000000000000000000000000000000000000000000000",
+        "decodedInput": [
+          {
+            "value": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "type": "address",
+            "name": "asset"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "amount"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "onBehalfOf"
+          },
+          {
+            "value": 0,
+            "type": "uint16",
+            "name": "referralCode"
+          }
+        ],
+        "output": "0x",
+        "subtraces": 1,
+        "traceAddress": [0, 1]
+      },
+      {
+        "type": "DELEGATECALL",
+        "from": "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+        "to": "0xfcc00a1e250644d89af0df661bc6f04891e21585",
+        "gas": "0x5c59f75",
+        "gasUsed": "0x2a435",
+        "input": "0xe8eda9df000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000000000000000e8d4a51000000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd6200000000000000000000000000000000000000000000000000000000000000000",
+        "decodedInput": [
+          {
+            "value": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "type": "address",
+            "name": "asset"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "amount"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "onBehalfOf"
+          },
+          {
+            "value": 0,
+            "type": "uint16",
+            "name": "referralCode"
+          }
+        ],
+        "method": "deposit",
+        "output": "0x",
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0]
+      },
+      {
+        "type": "DELEGATECALL",
+        "from": "0xfcc00a1e250644d89af0df661bc6f04891e21585",
+        "to": "0x666835b336a3a5198b2895d94109131d1b23ad11",
+        "gas": "0x5ae7aa9",
+        "gasUsed": "0x2957c",
+        "input": "0x1913f1610000000000000000000000000000000000000000000000000000000000000034000000000000000000000000000000000000000000000000000000000000003600fc5de2c6463c00bb44b34dcb2f7a7d9b46e81f8e104bd70cd913270a7e951e000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000000000000000000000000000000000e8d4a51000000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd6200000000000000000000000000000000000000000000000000000000000000000",
+        "output": "0x",
+        "subtraces": 6,
+        "traceAddress": [0, 1, 0, 0]
+      },
+      {
+        "type": "STATICCALL",
+        "from": "0x666835b336a3a5198b2895d94109131d1b23ad11",
+        "to": "0xea51d7853eefb32b6ee06b1c12e6dcca88be0ffe",
+        "gas": "0x59775de",
+        "gasUsed": "0x1d2c",
+        "input": "0xb1bf962d",
+        "output": "0x000000000000000000000000000000000000000000000ad762b06792b48b2bc7",
+        "decodedOutput": [
+          {
+            "value": "51196826102235415653319",
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0, 0, 0]
+      },
+      {
+        "type": "DELEGATECALL",
+        "from": "0xea51d7853eefb32b6ee06b1c12e6dcca88be0ffe",
+        "to": "0xac725cb59d16c81061bdea61041a8a5e73da9ec6",
+        "gas": "0x58104c5",
+        "gasUsed": "0x973",
+        "input": "0xb1bf962d",
+        "output": "0x000000000000000000000000000000000000000000000ad762b06792b48b2bc7",
+        "decodedOutput": [
+          {
+            "value": "51196826102235415653319",
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "subtraces": 0,
+        "traceAddress": [0, 1, 0, 0, 0, 0]
+      },
+      {
+        "type": "STATICCALL",
+        "from": "0x666835b336a3a5198b2895d94109131d1b23ad11",
+        "to": "0x102633152313c81cd80419b6ecf66d14ad68949a",
+        "gas": "0x5974e04",
+        "gasUsed": "0x26fe",
+        "input": "0x79774338",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decodedOutput": [
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "0",
+            "type": "uint40",
+            "name": ""
+          }
+        ],
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0, 0, 1]
+      },
+      {
+        "type": "DELEGATECALL",
+        "from": "0x102633152313c81cd80419b6ecf66d14ad68949a",
+        "to": "0x15c5620dffac7c7366eed66c20ad222ddbb1ed57",
+        "gas": "0x580dd8b",
+        "gasUsed": "0x1339",
+        "input": "0x79774338",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decodedOutput": [
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "0",
+            "type": "uint40",
+            "name": ""
+          }
+        ],
+        "subtraces": 0,
+        "traceAddress": [0, 1, 0, 0, 1, 0]
+      },
+      {
+        "type": "STATICCALL",
+        "from": "0x666835b336a3a5198b2895d94109131d1b23ad11",
+        "to": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+        "gas": "0x596cc61",
+        "gasUsed": "0x1d00",
+        "input": "0xb1bf962d",
+        "output": "0x00000000000000000000000000000000000000000000114ef2af8eeefa37cfdf",
+        "decodedOutput": [
+          {
+            "value": "81736563599568467906527",
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0, 0, 2]
+      },
+      {
+        "type": "DELEGATECALL",
+        "from": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+        "to": "0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d",
+        "gas": "0x5805dee",
+        "gasUsed": "0x947",
+        "input": "0xb1bf962d",
+        "output": "0x00000000000000000000000000000000000000000000114ef2af8eeefa37cfdf",
+        "decodedOutput": [
+          {
+            "value": "81736563599568467906527",
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "subtraces": 0,
+        "traceAddress": [0, 1, 0, 0, 2, 0]
+      },
+      {
+        "type": "STATICCALL",
+        "from": "0x666835b336a3a5198b2895d94109131d1b23ad11",
+        "to": "0x53f57eaad604307889d87b747fc67ea9de430b01",
+        "gas": "0x59697a0",
+        "gasUsed": "0x1bf8",
+        "input": "0xa58987090000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e8d4a5100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ae0682924bc33ddcc8b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005dc000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+        "decodedInput": [
+          {
+            "value": {
+              "unbacked": "0",
+              "liquidityAdded": "1000000000000",
+              "liquidityTaken": "0",
+              "totalStableDebt": "0",
+              "totalVariableDebt": "51363241071852123966603",
+              "averageStableBorrowRate": "0",
+              "reserveFactor": "1500",
+              "reserve": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+              "aToken": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8"
+            },
+            "type": "(uint256,uint256,uint256,uint256,uint256,uint256,uint256,address,address)",
+            "name": "params"
+          }
+        ],
+        "output": "0x000000000000000000000000000000000000000000118ef8a26bf0405e24b69600000000000000000000000000000000000000000052329f9deaf48c26dd378700000000000000000000000000000000000000000020ec7e1aea4cd69b1ef4c1",
+        "decodedOutput": [
+          {
+            "value": "21226901470258681459553942",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "99370979944027085694908295",
+            "type": "uint256",
+            "name": ""
+          },
+          {
+            "value": "39802430946825731410162881",
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0, 0, 3]
+      },
+      {
+        "type": "STATICCALL",
+        "from": "0x53f57eaad604307889d87b747fc67ea9de430b01",
+        "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "gas": "0x58036ed",
+        "gasUsed": "0x9e6",
+        "input": "0x70a082310000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+        "decodedInput": [
+          {
+            "value": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+            "type": "address",
+            "name": ""
+          }
+        ],
+        "method": "balanceOf",
+        "output": "0x00000000000000000000000000000000000000000000067576aa97f55de542b8",
+        "decodedOutput": [
+          {
+            "value": "30501018767764503216824",
+            "type": "uint256",
+            "name": ""
+          }
+        ],
+        "subtraces": 0,
+        "traceAddress": [0, 1, 0, 0, 3, 0]
+      },
+      {
+        "type": "CALL",
+        "from": "0x666835b336a3a5198b2895d94109131d1b23ad11",
+        "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+        "gas": "0x5966c6a",
+        "gasUsed": "0x2021",
+        "value": "0x0",
+        "input": "0x23b872dd000000000000000000000000d322a49006fc828f9b5b37ab215f99b4e5cab19c0000000000000000000000004d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8000000000000000000000000000000000000000000000000000000e8d4a51000",
+        "decodedInput": [
+          {
+            "value": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "type": "address",
+            "name": "src"
+          },
+          {
+            "value": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+            "type": "address",
+            "name": "dst"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "wad"
+          }
+        ],
+        "method": "transferFrom",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "decodedOutput": [
+          {
+            "value": true,
+            "type": "bool",
+            "name": ""
+          }
+        ],
+        "subtraces": 0,
+        "traceAddress": [0, 1, 0, 0, 4]
+      },
+      {
+        "type": "CALL",
+        "from": "0x666835b336a3a5198b2895d94109131d1b23ad11",
+        "to": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+        "gas": "0x5964af5",
+        "gasUsed": "0xb01a",
+        "value": "0x0",
+        "input": "0xb3f1c93d000000000000000000000000d322a49006fc828f9b5b37ab215f99b4e5cab19c000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd620000000000000000000000000000000000000000000000000000000e8d4a510000000000000000000000000000000000000000000033c6eb13016e4c08cfc9e83",
+        "decodedInput": [
+          {
+            "value": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "type": "address",
+            "name": "caller"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "onBehalfOf"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "amount"
+          },
+          {
+            "value": "1001513307492938143179251331",
+            "type": "uint256",
+            "name": "index"
+          }
+        ],
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "decodedOutput": [
+          {
+            "value": true,
+            "type": "bool",
+            "name": ""
+          }
+        ],
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0, 0, 5]
+      },
+      {
+        "type": "DELEGATECALL",
+        "from": "0x4d5f47fa6a74757f35c14fd3a6ef8e3c9bc514e8",
+        "to": "0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d",
+        "gas": "0x57fefc4",
+        "gasUsed": "0xade3",
+        "input": "0xb3f1c93d000000000000000000000000d322a49006fc828f9b5b37ab215f99b4e5cab19c000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd620000000000000000000000000000000000000000000000000000000e8d4a510000000000000000000000000000000000000000000033c6eb13016e4c08cfc9e83",
+        "decodedInput": [
+          {
+            "value": "0xd322a49006fc828f9b5b37ab215f99b4e5cab19c",
+            "type": "address",
+            "name": "caller"
+          },
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "onBehalfOf"
+          },
+          {
+            "value": "1000000000000",
+            "type": "uint256",
+            "name": "amount"
+          },
+          {
+            "value": "1001513307492938143179251331",
+            "type": "uint256",
+            "name": "index"
+          }
+        ],
+        "method": "mint",
+        "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "decodedOutput": [
+          {
+            "value": true,
+            "type": "bool",
+            "name": ""
+          }
+        ],
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0, 0, 5, 0]
+      },
+      {
+        "type": "CALL",
+        "from": "0x7effd7b47bfd17e52fb7559d3f924201b9dbff3d",
+        "to": "0x8164cc65827dcfe994ab23944cbc90e0aa80bfcb",
+        "gas": "0x569739a",
+        "gasUsed": "0x1e15",
+        "value": "0x0",
+        "input": "0x31873e2e000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd62000000000000000000000000000000000000000000000114ef2af8eeefa37cfdf0000000000000000000000000000000000000000000000000000000000000000",
+        "decodedInput": [
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "user"
+          },
+          {
+            "value": "81736563599568467906527",
+            "type": "uint256",
+            "name": "totalSupply"
+          },
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": "userBalance"
+          }
+        ],
+        "output": "0x",
+        "subtraces": 1,
+        "traceAddress": [0, 1, 0, 0, 5, 0, 0]
+      },
+      {
+        "type": "DELEGATECALL",
+        "from": "0x8164cc65827dcfe994ab23944cbc90e0aa80bfcb",
+        "to": "0xe7b67f44ea304dd7f6d215b13686637ff64cd2b2",
+        "gas": "0x553ba9e",
+        "gasUsed": "0xa73",
+        "input": "0x31873e2e000000000000000000000000eeb2f6f7a3953b8d9abb8755872f106cebadd62000000000000000000000000000000000000000000000114ef2af8eeefa37cfdf0000000000000000000000000000000000000000000000000000000000000000",
+        "decodedInput": [
+          {
+            "value": "0xeeb2f6f7a3953b8d9abb8755872f106cebadd620",
+            "type": "address",
+            "name": "user"
+          },
+          {
+            "value": "81736563599568467906527",
+            "type": "uint256",
+            "name": "totalSupply"
+          },
+          {
+            "value": "0",
+            "type": "uint256",
+            "name": "userBalance"
+          }
+        ],
+        "method": "handleAction",
+        "output": "0x",
+        "subtraces": 0,
+        "traceAddress": [0, 1, 0, 0, 5, 0, 0, 0]
+      }
+    ]
+  }
+}

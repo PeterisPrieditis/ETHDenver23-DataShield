@@ -1,3 +1,3 @@
 # ETHDener23DataShield
 
-![zkMEV](./img/bufficorn.jpeg)
+![zkMEV](./img/bufficorn2.jpeg)

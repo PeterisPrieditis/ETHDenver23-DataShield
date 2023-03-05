@@ -1,4 +1,4 @@
-# ETHDener23-DataShield
+# ETHDenver23 - DataShield
 
 <img src="./img/bufficorn2.jpeg" width=75% height=75%>
 

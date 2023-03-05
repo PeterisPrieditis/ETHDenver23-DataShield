@@ -129,11 +129,41 @@ const Index = () => {
   return (
     <Container>
       <Heading>
-        Welcome to <Span>template-snap</Span>
+        Welcome to <Span>Data Shield</Span>
       </Heading>
       <Subtitle>
-        Get started by editing <code>src/index.ts</code>
+      Find data on any<code>ETH NFT</code>
       </Subtitle>
+
+    <div>    <input/><button>Analyze</button> </div>
+      <CardContainer>
+      <Card
+            content={{
+              title: 'Smart money',
+              description:
+                <div>
+
+                  Using our insights, you can make better decisions and earn more money.
+                <table>
+                  <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+
+                    <td>5</td>
+                    <td>6</td>
+                  </tr>
+                </table>
+                
+                </div>
+ 
+            }}
+            fullWidth
+          />
+        </CardContainer>
       <CardContainer>
         {state.error && (
           <ErrorMessage>
@@ -183,25 +213,7 @@ const Index = () => {
             disabled={!state.installedSnap}
           />
         )}
-        <Card
-          content={{
-            title: 'Send Hello message',
-            description:
-              'Display a custom message within a confirmation screen in MetaMask.',
-            button: (
-              <SendHelloButton
-                onClick={handleSendHelloClick}
-                disabled={!state.installedSnap}
-              />
-            ),
-          }}
-          disabled={!state.installedSnap}
-          fullWidth={
-            state.isFlask &&
-            Boolean(state.installedSnap) &&
-            !shouldDisplayReconnectButton(state.installedSnap)
-          }
-        />
+      
         <Notice>
           <p>
             Please note that the <b>snap.manifest.json</b> and{' '}
@@ -209,6 +221,7 @@ const Index = () => {
             the bundle must be hosted at the location specified by the location
             field.
           </p>
+          
         </Notice>
       </CardContainer>
     </Container>
@@ -216,3 +229,4 @@ const Index = () => {
 };
 
 export default Index;
+

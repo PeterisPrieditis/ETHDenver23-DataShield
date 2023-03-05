@@ -3,7 +3,8 @@ import styled, { useTheme } from 'styled-components';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
 import { connectSnap, getThemePreference, getSnap } from '../utils';
 import { HeaderButtons } from './Buttons';
-import { SnapLogo } from './SnapLogo';
+// import { SnapLogo } from './SnapLogo';
+import {ReactComponent as SnapLogo} from "./../assets/logo.svg";
 import { Toggle } from './Toggle';
 
 const HeaderWrapper = styled.header`
@@ -63,7 +64,7 @@ export const Header = ({
     <HeaderWrapper>
       <LogoWrapper>
         <SnapLogo color={theme.colors.icon.default} size={36} />
-        <Title>template-snap</Title>
+        <Title>Data Shield</Title>
       </LogoWrapper>
       <RightContainer>
         <Toggle

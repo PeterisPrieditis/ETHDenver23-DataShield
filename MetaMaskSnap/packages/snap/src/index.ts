@@ -1,7 +1,7 @@
 import { blockExplorerStatus } from './API/blockExplorerStatus';
 import { simulateAssetChangesAlchemy } from './API/alchemyTxtSimulation';
 import { getEtherscanLabel } from './API/getEtherscanLabel';
-import { goPlusPhishing } from './API/goPlusSecurityPhishing';
+import { goPlusPhishing } from './API/goPlus';
 import {
   OnRpcRequestHandler,
   OnTransactionHandler,
@@ -117,13 +117,9 @@ export const onTransaction: OnTransactionHandler = async ({
   console.log(
     '======================================================================',
   );
-  //console.log(`transactionOrigin - ${transactionOrigin}`);
-  //console.log(`typeof transactionOrigin - ` + typeof transactionOrigin);
-
-  let chainIdHex = chainId.substring(chainId.indexOf(':') + 1, chainId.length);
-  let chainIdDec = parseInt(chainIdHex, 16);
+  const chainIdHex = chainId.substring(chainId.indexOf(':') + 1, chainId.length);
+  const chainIdDec = parseInt(chainIdHex, 16);
   console.log(chainIdHex, ' ', chainIdDec);
-
   console.log(`transaction.from - ${transaction.from}`);
   console.log(`transaction.to - ${transaction.to}`);
   console.log(`transaction.value - ${transaction.value}`);
@@ -132,21 +128,21 @@ export const onTransaction: OnTransactionHandler = async ({
   console.log(`transaction.gas - ${transaction.gas}`);
   console.log(`transaction.maxFeePerGas - ${transaction.maxFeePerGas}`);
 
-  let filteredData = await simulateAssetChangesAlchemy(chainIdDec, transaction);
-
+  const filteredData = await simulateAssetChangesAlchemy(chainIdDec, transaction);
+    console.log("filteredData", filteredData);
   let contractSourceVerified = await blockExplorerStatus(
     chainIdDec,
     transaction.to,
   );
 
-  let blockExplorerLabel = await getEtherscanLabel(chainIdDec, transaction.to);
+  const blockExplorerLabel = await getEtherscanLabel(chainIdDec, transaction.to);
   console.log(`blockExplorerLabel - ${blockExplorerLabel}`);
   console.log(`blockExplorerLabel type of- ` + typeof blockExplorerLabel);
 
-  let phishingStatus = await goPlusPhishing(transactionOrigin);
+  const phishingStatus = await goPlusPhishing(transactionOrigin);
   console.log(`phishingStatus - ${phishingStatus}`);
 
-  let snapUI = [heading('NFT Insights - Txt Simulation')];
+  const snapUI = [heading('NFT Insights - Txt Simulation')];
 
   if (contractSourceVerified) {
     snapUI.push(text('Contract code **IS** verified'));
@@ -167,26 +163,26 @@ export const onTransaction: OnTransactionHandler = async ({
   snapUI.push(divider());
 
   for (let i = 0; i < filteredData.length; i++) {
-    if (filteredData[i].from == transaction.from) {
+    if (filteredData[i]?.from == transaction?.from) {
       snapUI.push(text('**Transfering asset FROM your account**'));
     } else {
       snapUI.push(text('**Transfering asset TO your account**'));
     }
 
-    snapUI.push(text('change type : ' + filteredData[i].changeType));
-    snapUI.push(text('asset type : ' + filteredData[i].assetType));
-    snapUI.push(text('name : ' + filteredData[i].name));
-    snapUI.push(text('symbol : ' + filteredData[i].symbol));
+    snapUI.push(text('change type : ' + filteredData[i]?.changeType));
+    snapUI.push(text('asset type : ' + filteredData[i]?.assetType));
+    snapUI.push(text('name : ' + filteredData[i]?.name));
+    snapUI.push(text('symbol : ' + filteredData[i]?.symbol));
 
-    if (filteredData[i].from == transaction.from) {
+    if (filteredData[i]?.from == transaction?.from) {
       snapUI.push(text('from : _YOUR ACCOUNT_'));
-      snapUI.push(text('to : ' + filteredData[i].to));
+      snapUI.push(text('to : ' + filteredData[i]?.to));
     } else {
-      snapUI.push(text('from : ' + filteredData[i].from));
+      snapUI.push(text('from : ' + filteredData[i]?.from));
       snapUI.push(text('to : _YOUR ACCOUNT_'));
     }
 
-    snapUI.push(text('amount : ' + filteredData[i].amount));
+    snapUI.push(text('amount : ' + filteredData[i]?.amount));
   }
 
   return {

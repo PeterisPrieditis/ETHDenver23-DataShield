@@ -5,6 +5,9 @@
 Welcome to ETH Denver Data Shield repository! Go to [Data Shield](https://eth-dener23-data-shield.vercel.app) Now! And stop the crypto scams!
 
 ## Data Shield MetaMask Website
+- Mantle Ethereum layer-2 transaction tracer
+- We aggregated data to protect users, we used covalent to write a custom query to detect nft arbitrage (aka smart money)
+- MetaMask Snap installation that was made from [Truffle Snaps Box](https://trufflesuite.com/boxes/metamask-snap-box/)
 
 <img src="./img/landing_page.png" width=75% height=75%>
 

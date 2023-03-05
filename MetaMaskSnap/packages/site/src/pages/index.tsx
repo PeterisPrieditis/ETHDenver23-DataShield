@@ -1,8 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
-import * as smartmoney from '../assets/smart_money.json';
-import * as smarttx from '../assets/smart_tx.json';
+import {smartmoney} from '../assets/smartmoney';
 
 import {
   connectSnap,

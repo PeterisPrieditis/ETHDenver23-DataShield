@@ -4,6 +4,9 @@
 
 Welcome to ETH Denver Data Shield repository! Go to [Data Shield](https://eth-dener23-data-shield.vercel.app) Now! And stop the crypto scams!
 
+## Data Shield MetaMask Website
+
+<img src="./img/landing_page.png" width=75% height=75%>
 
 ## Data Shield MetaMask Snap
 - Etherscan API shows if contract source code has been verified

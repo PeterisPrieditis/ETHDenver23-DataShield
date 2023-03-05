@@ -1,3 +1,3 @@
 # ETHDener23DataShield
 
-![zkMEV](./img/bufficorn2.jpeg)
+<img src="./img/bufficorn2.jpeg" width=75% height=75%>

@@ -11,6 +11,9 @@ Welcome to ETH Denver Data Shield repository! Go to [Data Shield](https://eth-de
 
 <img src="./img/landing_page.png" width=75% height=75%>
 
+##### Mantle Ethereum layer-2 transaction tracer:
+<img src="./img/transaction_tracer.png" width=75% height=75%>
+
 ## Data Shield MetaMask Snap
 - Etherscan API shows if contract source code has been verified
 - Etherscan Labels indicate a category that an address, token, transaction or block page belongs to. Some examples of labels are "scam", "Tornado.cash". All labels are visible here https://polygonscan.com/labelcloud

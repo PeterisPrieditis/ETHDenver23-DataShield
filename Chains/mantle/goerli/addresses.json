@@ -1,0 +1,22 @@
+{
+    "Lib_AddressManager": "0xA647F5947C50248bc4b2eF773791c9C2bc01C65A",
+    "ChainStorageContainer-CTC-batches": "0x04e5C3F98ac6711baDd357A76E8FEAe226Dd60c7",
+    "ChainStorageContainer-SCC-batches": "0x5AECf975b8e63EA7FD1941d04D1aE68785fBB0E5",
+    "CanonicalTransactionChain": "0x654e6dF111F98374d9e5d908D7a5392C308aA18D",
+    "BondManager": "0xeBE3f28BbFa7bB8f2C066C1A792073203B985e27",
+    "BVM_L1CrossDomainMessenger": "0x3Be1737dA49d04315EeeE24B679764dc53c87858",
+    "Proxy__BVM_L1CrossDomainMessenger": "0x7Bfe603647d5380ED3909F6f87580D0Af1B228B4",
+    "StateCommitmentChain": "0x91A5D806BA73d0AA4bFA9B318126dDE60582e92a",
+    "Proxy__BVM_L1StandardBridge": "0xc92470D7Ffa21473611ab6c6e2FcFB8637c8f330",
+    "TssGroupManager": "0x316C8b31bdfBeb10b8450170618c71976efB4cB1",
+    "TssStakingSlashing": "0xeD7bBd9F2cE89Fc285315002e185A6B967514B64",
+    "Proxy__TSS_GroupManager": "0xdf78309dc8800b940a16e8afd66b3212d950780B",
+    "Proxy__TSS_StakingSlashing": "0xAfA10829aF4f7Fec912b1590F9a259e52c48abE9",
+    "AddressDictator": "0x490722492d3CfB0e90dB1E62546c344A1700a347",
+    "ChugSplashDictator": "0xE4Ea03fc31f40C687aC4bF412C78ed050043b8A7",
+    "L1StandardBridge_for_verification_only": "0x6544Edd5862A26fE8DB7f783f7D779770508d5fE",
+    "BVM_EigenDataLayrChain": "0x1D8f521D20Aa256D88b6AC774F7A51E74f62fd32",
+    "Proxy__BVM_EigenDataLayrChain": "0xb8B7d27b71c409CC5f0eCf733CE32dDe07bb6828",
+    "TestBitToken": "0x5a94Dc6cc85fdA49d8E9A8b85DDE8629025C42be",
+    "AddressManager": "0xA647F5947C50248bc4b2eF773791c9C2bc01C65A"
+ }
